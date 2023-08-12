@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>فرم ایجاد کاربر جدید</h2>
-<form action="/store" method="POST">
+<form class="base-form" action="/store" method="POST">
     @csrf
     <div class="item">
         <label class="item-label" for="name">نام:</label>

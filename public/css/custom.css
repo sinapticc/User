@@ -1,7 +1,15 @@
 body {
     direction: rtl;
-    font-family: Arial, sans-serif;
     text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 .birth_date_wrapper {
@@ -23,8 +31,13 @@ table {
 
 th,
 td {
-    border: 1px solid #ccc;
     padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background-color: #f2f2f2;
 }
 
 thead {
@@ -39,7 +52,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-form {
+.base-form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -62,14 +75,28 @@ input[type="number"] {
 .item .item-label {
     margin-bottom: 10px;
 }
-form button[type="submit"] {
+button {
+    background-color: #3490dc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button a {
+    color: #fff;
+}
+a {
+    text-decoration: none;
+}
+/* form button[type="submit"] {
     background-color: #3490dc;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 form button[type="submit"]:hover {
     background-color: #2779bd;
@@ -78,4 +105,13 @@ form button[type="submit"]:hover {
     width: 10%;
     margin: 0 5px;
     margin-bottom: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
 }
