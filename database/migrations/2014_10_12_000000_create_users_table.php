@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('father_name');
             $table->string('nat_id');
             $table->string('birth_place');
-            $table->string('day');
-            $table->string('month');
-            $table->string('year');
+            $table->integer('province');
+            $table->integer('city');
+            $table->string('address');
+            $table->string('marriage');
+            $table->string('birth_date');
         });
     }
 

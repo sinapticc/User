@@ -12,6 +12,14 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
     public $timestamps = false;
 
+    public function userProvince()
+    {
+        return $this->belongsTo(Province::class, 'province');
+    }
+    public function userCity()
+    {
+        return $this->belongsTo(City::class, 'city');
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -24,9 +32,8 @@ class User extends Authenticatable
         'father_name',
         'nat_id',
         'birth_place',
-        'day',
-        'month',
-        'year',
+        'birth_date',
+        'marriage',
     ];
 
 

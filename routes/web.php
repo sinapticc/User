@@ -29,5 +29,5 @@ Route::put('/user/{user}', [UserController::class, 'update'])->name('user.update
 
 Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user.destroy');
 
-
+Route::get('/get-cities/{provinceId}', [UserController::class, 'getCities'])->name('cities.get');
 
