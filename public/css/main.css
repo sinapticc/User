@@ -14,6 +14,10 @@ body, input {
 	font: 12px Tahoma;
 }
 
+.inner-body {
+    margin-top: 100px;
+}
+
 label {
 	font-weight: bold;
 	line-height: 2em;

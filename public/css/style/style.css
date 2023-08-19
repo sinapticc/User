@@ -77,6 +77,10 @@ body {
     outline: 0 !important
 }
 
+.inner-body {
+    margin-top: 100px;
+}
+
 .error-message {
     color: red;
     font-size: 14px;
