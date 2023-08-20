@@ -473,7 +473,7 @@
                     @csrf
                     <div class="form-group">
                         <label class="" for="name">نام:</label>
-                        <input class="form-control" type="text" name="name" required/>
+                        <input class="form-control" type="text" name="name" value="{{ old('name') }}" required/>
                         @error('name')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -481,7 +481,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="family_name">نام خانوادگی:</label>
-                        <input class="form-control" type="text" name="family_name" required/>
+                        <input class="form-control" type="text" name="family_name" value="{{ old('family_name') }}" required/>
                         @error('family_name')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -489,7 +489,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="father_name">نام پدر:</label>
-                        <input class="form-control" type="text" name="father_name" required/>
+                        <input class="form-control" type="text" name="father_name" value="{{ old('father_name') }}" required/>
                         @error('father_name')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -497,7 +497,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="nat_id">شماره شناسنامه:</label>
-                        <input class="form-control" type="number" name="nat_id" required/>
+                        <input class="form-control" type="number" name="nat_id" value="{{ old('nat_id') }}" required/>
                         @error('nat_id')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -505,7 +505,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="birth_place">محل صدور:</label>
-                        <input class="form-control" type="text" name="birth_place" required/>
+                        <input class="form-control" type="text" name="birth_place" value="{{ old('birth_place') }}" required/>
                         @error('birth_place')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -516,7 +516,7 @@
                         <select class="form-control select select2" name="province" onChange="updateCityOptions(this.value);">
                             <option value="0">لطفا استان را انتخاب نمایید</option>
                             @foreach ($provinces as $province)
-                                <option value="{{ $province->id }}">{{ $province->name }}</option>
+                                <option value="{{ $province->id }}" {{ old('province') == $province->id ? 'selected' : '' }}>{{ $province->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -530,7 +530,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="address">آدرس:</label>
-                        <input class="form-control" type="text" name="address" required/>
+                        <input class="form-control" type="text" name="address" value="{{ old('address') }}" required/>
                         @error('address')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -538,19 +538,17 @@
                     <br/>
                     <div class="col-lg-3 mg-t-20 mg-lg-t-0">
                         <label class="">وضعیت تاهل:</label>
-                        <label class="rdiobox"><input type="radio" name="marriage" value="single" required><span>مجرد</span></label>
-                        <label class="rdiobox"><input type="radio" name="marriage" value="married" required> <span>متاهل</span></label>
+                        <input type="radio" name="marriage" value="single" {{ old('marriage') == 'single' ? 'checked' : '' }} required><span>مجرد</span></label>
+                        <input type="radio" name="marriage" value="married" {{ old('marriage') == 'married' ? 'checked' : '' }} required><span>متاهل</span></label>
                     </div>
                     <br/>
                     <div class="form-group">
                         <label class="" for="birth_date">تاریخ تولد:</label>
-                        <input class="form-control" type="text" name="birth_date" id="pcal1" class="pdate" required/>
+                        <input class="form-control" type="text" name="birth_date" id="pcal1" class="pdate" value="{{ old('birth_date') }}" required/>
                     </div>
                     <br/>
                     <button type="submit" class="btn ripple btn-main-primary btn-block">ثبت کاربر</button>
                 </form>
-                <br>
-                <a href="/">لیست کاربران</a>
             </div>
         </div>
     </div>
