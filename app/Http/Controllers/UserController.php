@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Province;
 use App\Models\City;
+use App\Models\PhoneNumber;
 
 
 class UserController extends Controller
@@ -37,19 +38,38 @@ class UserController extends Controller
             'city' => 'required|int',
             'address' => 'required|string|max:255|regex:/[ء-ي‌]+/u',
             'marriage' => 'required|in:single,married',
-            'birth_date' => 'required|string|max:255'
+            'birth_date' => 'required|string|max:255',
+            'phone_num' => 'required|string|size:11',
+            'telephone' => 'required|string|size:11',
+            'phone_numbers' => 'array',
+            'phone_numbers.*'=> 'size:11'
             ],[
             "name.regex" =>"مقدار فیلد را فارسی وارد نمایید",
             "family_name.regex" =>"مقدار فیلد را فارسی وارد نمایید",
             "father_name.regex" =>"مقدار فیلد را فارسی وارد نمایید",
             "birth_place.regex" =>"مقدار فیلد را فارسی وارد نمایید",
-            "nat_id" =>"مقدار کد ملی 10 کاراکتر است",
+            "nat_id.size" =>"مقدار کد ملی 10 کاراکتر است",
+            "phone_num.size" =>"مقدار شماره همراه 11 کاراکتر است",
+            "telephone.size" =>"مقدار شماره تلفن 11 کاراکتر است",
             "address.regex" =>"مقدار فیلد را فارسی وارد نمایید",
 
+            "name.required" =>"فیلد اجباری است.",
+            "family_name.required" =>"فیلد اجباری است.",
+            "father_name.required" =>"فیلد اجباری است.",
+            "birth_place.required" =>"فیلد اجباری است.",
+            "nat_id.required" =>"فیلد اجباری است.",
+            "address.required" =>"فیلد اجباری است.",
+            "birth_date.required" =>"فیلد اجباری است.",
+            "phone_num.required" =>"فیلد اجباری است.",
+            "telephone.required" =>"فیلد اجباری است.",
+
         ]);
+       //dd($request->all());
 
 
         $user = new User();
+
+
         $user->name = $validatedData['name'];
         $user->family_name = $validatedData['family_name'];
         $user->father_name = $validatedData['father_name'];
@@ -60,7 +80,26 @@ class UserController extends Controller
         $user->address = $validatedData['address'];
         $user->marriage = $validatedData['marriage'];
         $user->birth_date = $validatedData['birth_date'];
+        $user->phone_num = $validatedData['phone_num'];
+        $user->telephone = $validatedData['telephone'];
         $user->save();
+
+
+
+        $phoneNumbers = $request->input('phone_numbers');
+        if ($phoneNumbers) {
+            foreach ($phoneNumbers as $phoneNumber) {
+                $new_num = new PhoneNumber();
+                $new_num-> user_id = $user->id;
+                $new_num-> phone_number = $phoneNumber;
+                $new_num-> phone_type = 'mobile';
+                $new_num->save();
+
+            }
+        }
+
+
+
 
         return redirect('/');
     }
@@ -74,6 +113,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        $phoneNumbers = $user->phoneNumbers;
         return view('user_details', compact('user'));
     }
 
@@ -91,13 +131,17 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'family_name' => 'required|string|max:255',
             'father_name' => 'required|string|max:255',
-            'nat_id' => 'required|string|max:255',
+            'nat_id' => 'required|string|size:10',
             'birth_place' => 'required|string|max:255',
             'province' => 'required|int',
             'city' => 'required|int',
             'address' => 'required|string|max:255',
             'marriage' => 'required|in:single,married',
             'birth_date' => 'required|string|max:255',
+            'phone_num' => 'required|string|size:11',
+            'telephone' => 'required|string|size:11',
+            'phone_numbers' => 'array',
+            'phone_numbers.*' => 'string|size:11',
         ]);
 
         $user->name = $validatedData['name'];
@@ -110,9 +154,27 @@ class UserController extends Controller
         $user->address = $validatedData['address'];
         $user->marriage = $validatedData['marriage'];
         $user->birth_date = $validatedData['birth_date'];
+        $user->phone_num = $validatedData['phone_num'];
+        $user->telephone = $validatedData['telephone'];
         $user->save();
 
-        return redirect()->route('users.show', ['user' => $user->id]);
+        $user->phoneNumbers()->delete();
+
+        $phoneNumbers = $request->input('phone_numbers');
+        if ($phoneNumbers) {
+            foreach ($phoneNumbers as $phoneNumber) {
+                $new_num = new PhoneNumber();
+                $new_num->user_id = $user->id;
+                $new_num->phone_number = $phoneNumber;
+                $new_num->phone_type = 'mobile';
+                $new_num->save();
+            }
+        }
+
+
+
+
+        return redirect()->route('users.index');
     }
     public function destroy(User $user)
     {

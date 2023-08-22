@@ -8,6 +8,7 @@
     <link href="/css/dark-style.css" rel="stylesheet">
     <link href="/css/colors/default.css" rel="stylesheet">
 
+
     <!-- Favicon -->
     <link rel="icon" href="/img/brand/favicon.ico" type="image/x-icon"/>
 
@@ -36,6 +37,7 @@
     <!-- Sidemenu css-->
     <link href="/css/sidemenu/sidemenu.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
 </head>
@@ -486,11 +488,8 @@
 
                                                     <button class="btn ripple  btn-icon"> <a href="{{ route('user.edit', ['user' => $user->id]) }}"><i class="ti-pencil-alt"></i></a></button>
 
-                                                    <form action="{{ route('user.destroy', ['user' => $user->id]) }}" method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                    <button type="submit" class="btn ripple  btn-icon"><i class="ti-trash"></i></button>
-                                                    </form>
+                                                    <a href="{{ route('users.show', ['user' => $user->id, 'fromIndex' => true]) }}" class="btn ripple btn-icon"><i class="ti-trash"></i></a>
+
                                                 </div>
                                             </td>
                                         </tr>
@@ -506,6 +505,26 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    function confirmDelete(user_id) {
+        Swal.fire({
+            title: 'آیا مطمئن هستید؟',
+            text: "پس از حذف، اطلاعات کاربر قابل بازیابی نیست.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'بله، حذف شود',
+            cancelButtonText: 'لغو'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // ارسال فرم حذف با استفاده از جی‌کوئری یا اسکریپت جاوااسکریپت
+                $("#deleteForm" + user_id).submit();
+            }
+        });
+    }
+</script>
 
 
 <script src="plugins/jquery/jquery.min.js"></script>

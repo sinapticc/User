@@ -459,6 +459,7 @@
                         </div>
                     </div>
                 </div>
+
             <div class="row row-sm">
                 <div class="col-md-12 col-lg-12 col-xl-12">
                     <div class="card custom-card">
@@ -519,8 +520,34 @@
                                     <label for="birth_date">تاریخ تولد:</label>
                                     <input class="form-control" type="text" name="birth_date" id="pcal1" class="pdate" value="{{ $user->birth_date }}" required>
                                 </div>
+                                <br />
+                                <div class="form-group phone_num-field">
+                                    <label for="phone_num">شماره همراه:</label>
+                                    <input class="form-control" type="text" name="phone_num" id="pcal1" class="pdate" value="{{ $user->phone_num }}" required>
+
+                                <br />
+                                @if ($user->phoneNumbers->count() > 0)
+                                    <h3>شماره‌های همراه:</h3>
+                                    @foreach ($user->phoneNumbers as $index => $phoneNumber)
+                                        <div class="form-group phone_num-field">
+                                            <label for="phone_numbers[{{ $index }}]">شماره همراه {{ $index + 1 }}:</label>
+                                            <input class="form-control" type="text" name="phone_numbers[{{ $index }}]" value="{{ old('phone_numbers.' . $index, $phoneNumber->phone_number) }}" />
+                                        </div>
+                                    @endforeach
+                                @endif
+                                <button type="button" class="btn btn-success add-phone_num-field">+</button>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label for="telephone">تلفن:</label>
+                                    <input class="form-control" type="text" name="telephone" id="pcal1" class="pdate" value="{{ $user->telephone }}" required>
+                                </div>
 
                                 <button type="submit" class="btn ripple btn-main-primary btn-block">ذخیره تغییرات</button>
+
+
                             </form>
 
                         </div>
@@ -531,9 +558,57 @@
         </div>
     </div>
 </div>
-    <script type="text/javascript">
-        var objCal1 = new AMIB.persianCalendar( 'pcal1' );
-    </script>
+
+
+
+
+
+<script type="text/javascript">
+    var objCal1 = new AMIB.persianCalendar( 'pcal1' );
+</script>
+
+
+
+<script type="text/javascript">
+
+    function addPhoneNumField() {
+        var newField = document.createElement('div');
+        newField.className = 'phone_num-field';
+
+        var closeButton = document.createElement('button');
+        closeButton.type = 'button';
+        closeButton.className = 'btn btn-close rm-phone-field';
+        closeButton.textContent = '-';
+
+        var inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.className = 'form-control';
+        inputField.name = 'phone_numbers[]';
+        newField.appendChild(closeButton);
+        newField.appendChild(inputField);
+
+        var addButton = document.querySelector('.add-phone_num-field');
+        addButton.parentNode.insertBefore(newField, addButton);
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var addPhoneButton = document.querySelector('.add-phone_num-field');
+
+        addPhoneButton.addEventListener('click', addPhoneNumField);
+
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('rm-phone-field')) {
+                event.target.closest('.phone_num-field').remove();
+            }
+
+        });
+    });
+</script>
+
+
+
+
 <script src="/plugins/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap js-->

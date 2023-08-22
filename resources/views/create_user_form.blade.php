@@ -3,6 +3,7 @@
 <head>
     <title>فرم ایجاد کاربر جدید</title>
     <link rel="stylesheet" href="css/js-persian-cal.css">
+
     <script type="text/javascript" src="js/js-persian-cal.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/city.js') }}"></script>
 
@@ -473,7 +474,7 @@
                     @csrf
                     <div class="form-group">
                         <label class="" for="name">نام:</label>
-                        <input class="form-control" type="text" name="name" value="{{ old('name') }}" required/>
+                        <input class="form-control" type="text" name="name" value="{{ old('name') }}" />
                         @error('name')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -481,7 +482,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="family_name">نام خانوادگی:</label>
-                        <input class="form-control" type="text" name="family_name" value="{{ old('family_name') }}" required/>
+                        <input class="form-control" type="text" name="family_name" value="{{ old('family_name') }}" />
                         @error('family_name')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -489,7 +490,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="father_name">نام پدر:</label>
-                        <input class="form-control" type="text" name="father_name" value="{{ old('father_name') }}" required/>
+                        <input class="form-control" type="text" name="father_name" value="{{ old('father_name') }}" />
                         @error('father_name')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -497,7 +498,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="nat_id">شماره شناسنامه:</label>
-                        <input class="form-control" type="number" name="nat_id" value="{{ old('nat_id') }}" required/>
+                        <input class="form-control" type="number" name="nat_id" value="{{ old('nat_id') }}" />
                         @error('nat_id')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -505,7 +506,7 @@
                     <br/>
                     <div class="form-group">
                         <label class="" for="birth_place">محل صدور:</label>
-                        <input class="form-control" type="text" name="birth_place" value="{{ old('birth_place') }}" required/>
+                        <input class="form-control" type="text" name="birth_place" value="{{ old('birth_place') }}" />
                         @error('birth_place')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -525,12 +526,22 @@
                         <label class="" for="city">شهر:</label>
                         <select class="form-control select select2" name="city" id="city">
                             <option value="0">لطفا شهر را انتخاب نمایید</option>
+                            @php
+                                $selectedProvince = old('province');
+                                $selectedCity = [];
+                                if ($selectedProvince) {
+                                    $selectedCity = $provinces->find($selectedProvince)->cities;
+                                }
+                            @endphp
+                            @foreach ($selectedCity as $city)
+                                <option value="{{ $city->id }}" {{ old('city') == $city->id ? 'selected' : '' }}>{{ $city->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <br/>
                     <div class="form-group">
                         <label class="" for="address">آدرس:</label>
-                        <input class="form-control" type="text" name="address" value="{{ old('address') }}" required/>
+                        <input class="form-control" type="text" name="address" value="{{ old('address') }}" />
                         @error('address')
                         <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -538,21 +549,101 @@
                     <br/>
                     <div class="col-lg-3 mg-t-20 mg-lg-t-0">
                         <label class="">وضعیت تاهل:</label>
-                        <input type="radio" name="marriage" value="single" {{ old('marriage') == 'single' ? 'checked' : '' }} required><span>مجرد</span></label>
-                        <input type="radio" name="marriage" value="married" {{ old('marriage') == 'married' ? 'checked' : '' }} required><span>متاهل</span></label>
+                        <input type="radio" name="marriage" value="single" {{ old('marriage') == 'single' ? 'checked' : '' }} ><span>مجرد</span></label>
+                        <input type="radio" name="marriage" value="married" {{ old('marriage') == 'married' ? 'checked' : '' }} ><span>متاهل</span></label>
                     </div>
                     <br/>
                     <div class="form-group">
                         <label class="" for="birth_date">تاریخ تولد:</label>
-                        <input class="form-control" type="text" name="birth_date" id="pcal1" class="pdate" value="{{ old('birth_date') }}" required/>
+                        <input class="form-control" type="text" name="birth_date" id="pcal1" class="pdate" value="{{ old('birth_date') }}" />
+                        @error('birth_date')
+                        <div class="error-message">{{ $message }}</div>
+                        @enderror
                     </div>
                     <br/>
+                    <div class="form-group">
+                        <label class="" for="phone_num">شماره همراه:</label>
+                        <input class="form-control" type="number" name="phone_num" id="pcal1" class="pdate" value="{{ old('phone_num') }}" />
+                        @error('phone_num')
+                        <div class="error-message">{{ $message }}</div>
+                        @enderror
+
+                        @if (old('phone_numbers'))
+                            @foreach (old('phone_numbers') as $index => $phoneNumber)
+                                <div class="form-group phone_num-field">
+                                    <input class="form-control" type="text" name="phone_numbers[{{ $index }}]" value="{{ $phoneNumber }}" />
+                                    <button type="button" class="btn btn-close rm-phone-field">-</button>
+                                </div>
+                            @endforeach
+                        @endif
+
+                        <button type="button" class="btn btn-success add-phone_num-field">+</button>
+                    </div>
+                    <br/>
+
+                    <div class="form-group">
+                        <label class="" for="telephone">تلفن ثابت:</label>
+                        <input class="form-control" type="number" name="telephone" id="pcal1" class="pdate" value="{{ old('telephone') }}" />
+                        @error('telephone')
+                        <div class="error-message">{{ $message }}</div>
+                        @enderror
+
+                    </div>
+                    <br/>
+
                     <button type="submit" class="btn ripple btn-main-primary btn-block">ثبت کاربر</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+<script type="text/javascript">
+    "use strict";
+
+    var phone_number = 0;
+    var telephone_number = 0;
+
+    function addPhoneNumField() {
+        var newField = document.createElement('div');
+        newField.className = 'phone_num-field';
+
+        var closeButton = document.createElement('button');
+        closeButton.type = 'button';
+        closeButton.className = 'btn btn-close rm-phone-field';
+        closeButton.textContent = '-';
+
+        var inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.className = 'form-control';
+        inputField.name = 'phone_numbers[]';
+        newField.appendChild(closeButton);
+        newField.appendChild(inputField);
+
+        var addButton = document.querySelector('.add-phone_num-field');
+        addButton.parentNode.insertBefore(newField, addButton);
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var addPhoneButton = document.querySelector('.add-phone_num-field');
+
+        addPhoneButton.addEventListener('click', addPhoneNumField);
+
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('rm-phone-field')) {
+                event.target.closest('.phone_num-field').remove();
+            }
+
+        });
+    });
+</script>
+
+
+
 
 <script type="text/javascript">
     var objCal1 = new AMIB.persianCalendar('pcal1');

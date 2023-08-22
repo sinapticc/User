@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable
 {
@@ -20,6 +21,13 @@ class User extends Authenticatable
     {
         return $this->belongsTo(City::class, 'city');
     }
+
+    public function phoneNumbers(): HasMany
+    {
+        return $this->hasMany(PhoneNumber::class);
+    }
+
+
 
     /**
      * The attributes that are mass assignable.

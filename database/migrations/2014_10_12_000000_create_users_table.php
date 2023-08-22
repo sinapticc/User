@@ -23,6 +23,11 @@ return new class extends Migration
             $table->string('address');
             $table->string('marriage');
             $table->string('birth_date');
+            $table->string('phone_num');
+            $table->string('telephone');
+
+
+
         });
     }
 

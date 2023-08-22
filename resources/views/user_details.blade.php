@@ -6,6 +6,7 @@
     <link href="/css/skins.css" rel="stylesheet">
     <link href="/css/dark-style.css" rel="stylesheet">
     <link href="/css/colors/default.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="/img/brand/favicon.ico" type="image/x-icon"/>
@@ -509,6 +510,40 @@
                                         <td>تاریخ تولد</td>
                                         <td>{{ $user->birth_date }}</td>
                                     </tr>
+                                    <tr>
+                                        <td>شماره همراه</td>
+                                        <td>{{ $user->phone_num }}</td>
+                                    </tr>
+                                    <tr>
+                                        @if ($user->phoneNumbers->count() > 0)
+                                            <td>شماره‌های اضافی:</td>
+                                            @foreach ($user->phoneNumbers as $phoneNumber)
+                                            <tr><td>{{ $phoneNumber->phone_number }}</td></tr>
+                                            @endforeach
+                                        @endif
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>تلفن</td>
+                                        <td>{{ $user->telephone }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><form action="{{ route('user.destroy', ['user' => $user->id]) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+
+                                                @if(request()->has('fromIndex'))
+                                                    <button type="submit" name="delete" class="btn btn-danger">حذف کاربر</button>
+                                                @endif</td>
+
+                                        </form></td>
+                                        <td>@if(request()->has('fromIndex'))
+                                                <a href="{{ route('users.index')}}" class="btn btn-main-primary">بازگشت به صفحه اصلی</a>
+                                            @endif</td>
+                                    </tr>
+
+
                                 </table>
                             </div>
                         </div>
@@ -519,6 +554,19 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    function confirmDelete(userId) {
+        var response = prompt('آیا مطمئن هستید که می‌خواهید این کاربر را حذف کنید؟ (yes/no)');
+        if (response !== null) {
+            if (response.toLowerCase() === 'yes') {
+                return  document.getElementById('deleteForm' + userId).submit();
+            } else {
+                return  alert('عملیات حذف لغو شد.');
+            }
+        }
+    }
+</script>
 
 <script src="/plugins/jquery/jquery.min.js"></script>
 
