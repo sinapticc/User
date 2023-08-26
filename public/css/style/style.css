@@ -83,6 +83,12 @@ body {
     margin-top: 5px;
 }
 
+.profile-photo {
+    width: 150px;
+    height: 150px;
+
+}
+
 hr {
     box-sizing: content-box;
     height: 0;

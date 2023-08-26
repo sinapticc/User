@@ -13,6 +13,9 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
     public $timestamps = false;
 
+    protected $table = 'users';
+
+
     public function userProvince()
     {
         return $this->belongsTo(Province::class, 'province');
@@ -27,6 +30,11 @@ class User extends Authenticatable
         return $this->hasMany(PhoneNumber::class);
     }
 
+    public function addresses(): HasMany
+    {
+        return $this->hasMany(Address::class);
+    }
+
 
 
     /**
@@ -35,6 +43,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'image_path',
         'name',
         'family_name',
         'father_name',
@@ -66,4 +75,6 @@ class User extends Authenticatable
         'month' => 'string',
         'year' => 'string',
     ];
+
+
 }
