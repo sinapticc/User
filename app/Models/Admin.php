@@ -13,6 +13,13 @@ class Admin extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'admins';
 
+<<<<<<< HEAD
+=======
+//    public function login()
+//    {
+//        return $this->hasOne(login::class);
+//    }
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
 
     /**
      * @var array<int,string>

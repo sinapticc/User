@@ -62,8 +62,13 @@
                             <img src="/img/brand/logo-light.png" class="header-brand-img mb-4" alt="logo">
                             <div class="clearfix"></div>
                             <img src="/img/svgs/user.svg" class="ht-100 mb-0" alt="user">
+<<<<<<< HEAD
                             <h5 class="mt-4 text-white">وارد حساب کاربری خود شوید</h5>
                             <span class="tx-white-6 tx-13 mb-5 mt-xl-0">برای دسترسی به کاربران، وارد حساب کاربری خود شوید</span>
+=======
+                            <h5 class="mt-4 text-white">حساب کاربری برای خود بسازید</h5>
+                            <span class="tx-white-6 tx-13 mb-5 mt-xl-0">برای ایجاد ، کشف و ارتباط با جامعه جهانی ثبت نام کنید</span>
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-7 col-xs-12 col-sm-12 login_form ">
@@ -80,7 +85,11 @@
                                         @endif
                                         @csrf
                                         <h5 class="text-right mb-2">به حساب خود وارد شوید</h5>
+<<<<<<< HEAD
 
+=======
+                                        <p class="mb-4 text-muted tx-13 ml-0 text-right">برای ایجاد ، کشف و ارتباط با جامعه جهانی وارد سیستم شوید</p>
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                                         <div class="form-group text-right">
                                             <label>پست الکترونیک</label>
                                             <input class="form-control" placeholder="ایمیل خود را وارد کنید" type="text" name="email">
@@ -92,7 +101,11 @@
                                         <button class="btn ripple btn-main-primary btn-block" >ورود</button>
                                     </form>
                                     <div class="text-right mt-5 ml-0">
+<<<<<<< HEAD
                                         <div><a href="forget_password">رمز عبور خود را فراموش کرده اید؟</a></div>
+=======
+                                       
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                                         <div>حساب ندارید؟ <a href="register">اینجا ثبت نام کنید</a></div>
                                     </div>
                                 </div>

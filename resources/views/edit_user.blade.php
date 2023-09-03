@@ -142,7 +142,73 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                <div class="dropdown main-header-notification flag-dropdown">
+                    <a class="nav-link icon country-Flag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <circle cx="256" cy="256" r="256" fill="#f0f0f0"></circle>
+                            <g fill="#0052b4">
+                                <path
+                                    d="M52.92 100.142c-20.109 26.163-35.272 56.318-44.101 89.077h133.178L52.92 100.142zM503.181 189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075 89.076h133.176zM8.819 322.784c8.83 32.758 23.993 62.913 44.101 89.075l89.074-89.075H8.819zM411.858 52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.177l89.076-89.075zM100.142 459.079c26.163 20.109 56.318 35.272 89.076 44.102V370.005l-89.076 89.074zM189.217 8.819c-32.758 8.83-62.913 23.993-89.075 44.101l89.075 89.075V8.819zM322.783 503.181c32.758-8.83 62.913-23.993 89.075-44.101l-89.075-89.075v133.176zM370.005 322.784l89.075 89.076c20.108-26.162 35.272-56.318 44.101-89.076H370.005z">
+                                </path>
+                            </g>
+                            <g fill="#d80027">
+                                <path
+                                    d="M509.833 222.609H289.392V2.167A258.556 258.556 0 00256 0c-11.319 0-22.461.744-33.391 2.167v220.441H2.167A258.556 258.556 0 000 256c0 11.319.744 22.461 2.167 33.391h220.441v220.442a258.35 258.35 0 0066.783 0V289.392h220.442A258.533 258.533 0 00512 256c0-11.317-.744-22.461-2.167-33.391z">
+                                </path>
+                                <path
+                                    d="M322.783 322.784L437.019 437.02a256.636 256.636 0 0015.048-16.435l-97.802-97.802h-31.482v.001zM189.217 322.784h-.002L74.98 437.019a256.636 256.636 0 0016.435 15.048l97.802-97.804v-31.479zM189.217 189.219v-.002L74.981 74.98a256.636 256.636 0 00-15.048 16.435l97.803 97.803h31.481zM322.783 189.219L437.02 74.981a256.328 256.328 0 00-16.435-15.047l-97.802 97.803v31.482z">
+                                </path>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item d-flex ">
+                                <span class="avatar  ml-3 align-self-center bg-transparent"><img
+                                        src="/img/flags/french_flag.jpg" alt="img"></span>
+                            <div class="d-flex">
+                                <span class="mt-2">فرانسوی</span>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item d-flex">
+                                <span class="avatar  ml-3 align-self-center bg-transparent"><img
+                                        src="/img/flags/germany_flag.jpg" alt="img"></span>
+                            <div class="d-flex">
+                                <span class="mt-2">آلمان</span>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item d-flex">
+                                <span class="avatar ml-3 align-self-center bg-transparent"><img
+                                        src="/img/flags/italy_flag.jpg" alt="img"></span>
+                            <div class="d-flex">
+                                <span class="mt-2">ایتالیا</span>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item d-flex">
+                                <span class="avatar ml-3 align-self-center bg-transparent"><img
+                                        src="/img/flags/russia_flag.jpg" alt="img"></span>
+                            <div class="d-flex">
+                                <span class="mt-2">روسیه</span>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item d-flex">
+                                <span class="avatar  ml-3 align-self-center bg-transparent"><img
+                                        src="/img/flags/spain_flag.jpg" alt="img"></span>
+                            <div class="d-flex">
+                                <span class="mt-2">اسپانیا</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown d-md-flex">
+                    <a class="nav-link icon full-screen-link" href="#">
+                        <i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+                        <i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+                    </a>
+                </div>
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                 <div class="dropdown main-header-notification">
                     <a class="nav-link icon" href="#">
                         <i class="fe fe-bell header-icons"></i>
@@ -205,7 +271,16 @@
 
                     </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                <div class="dropdown d-md-flex header-settings">
+                    <a href="#" class="nav-link icon" id="sidebar-icon" data-bs-toggle="sidebar-left"
+                       data-bs-target=".sidebar-left">
+                        <i class="fe fe-align-left header-icons"></i>
+                    </a>
+                </div>
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                 <button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
                         aria-expanded="false" aria-label="تغییر پیمایش">
@@ -214,7 +289,206 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
+=======
+    <!-- End Main Header--> <!-- Mobile-header -->
+    <div class="mobile-main-header">
+        <div class="mb-1 navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                <div class="d-flex order-lg-2 mr-auto">
+                    <div class="dropdown header-search">
+                        <a class="nav-link icon header-search">
+                            <i class="fe fe-search header-icons"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="main-form-search p-2">
+                                <div class="input-group">
+                                    <div class="input-group-btn search-panel">
+                                        <select class="form-control select2-no-search">
+                                            <option label="دسته بندی ها">
+                                            </option>
+                                            <option value="IT Projects">
+                                                پروژه های IT
+                                            </option>
+                                            <option value="Business Case">
+                                                مورد تجاری
+                                            </option>
+                                            <option value="Microsoft Project">
+                                                پروژه مایکروسافت
+                                            </option>
+                                            <option value="Risk Management">
+                                                مدیریت ریسک
+                                            </option>
+                                            <option value="Team Building">
+                                                تیم سازی
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <input type="search" class="form-control"
+                                           placeholder="هر چیزی را جستجو کنید ...">
+                                    <button class="btn search-btn"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round" class="feather feather-search">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65">
+                                            </line>
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown main-header-notification flag-dropdown">
+                        <a class="nav-link icon country-Flag">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <circle cx="256" cy="256" r="256" fill="#f0f0f0"></circle>
+                                <g fill="#0052b4">
+                                    <path
+                                        d="M52.92 100.142c-20.109 26.163-35.272 56.318-44.101 89.077h133.178L52.92 100.142zM503.181 189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075 89.076h133.176zM8.819 322.784c8.83 32.758 23.993 62.913 44.101 89.075l89.074-89.075H8.819zM411.858 52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.177l89.076-89.075zM100.142 459.079c26.163 20.109 56.318 35.272 89.076 44.102V370.005l-89.076 89.074zM189.217 8.819c-32.758 8.83-62.913 23.993-89.075 44.101l89.075 89.075V8.819zM322.783 503.181c32.758-8.83 62.913-23.993 89.075-44.101l-89.075-89.075v133.176zM370.005 322.784l89.075 89.076c20.108-26.162 35.272-56.318 44.101-89.076H370.005z">
+                                    </path>
+                                </g>
+                                <g fill="#d80027">
+                                    <path
+                                        d="M509.833 222.609H289.392V2.167A258.556 258.556 0 00256 0c-11.319 0-22.461.744-33.391 2.167v220.441H2.167A258.556 258.556 0 000 256c0 11.319.744 22.461 2.167 33.391h220.441v220.442a258.35 258.35 0 0066.783 0V289.392h220.442A258.533 258.533 0 00512 256c0-11.317-.744-22.461-2.167-33.391z">
+                                    </path>
+                                    <path
+                                        d="M322.783 322.784L437.019 437.02a256.636 256.636 0 0015.048-16.435l-97.802-97.802h-31.482v.001zM189.217 322.784h-.002L74.98 437.019a256.636 256.636 0 0016.435 15.048l97.802-97.804v-31.479zM189.217 189.219v-.002L74.981 74.98a256.636 256.636 0 00-15.048 16.435l97.803 97.803h31.481zM322.783 189.219L437.02 74.981a256.328 256.328 0 00-16.435-15.047l-97.802 97.803v31.482z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item d-flex ">
+                                    <span class="avatar  ml-3 align-self-center bg-transparent"><img
+                                            src="/img/flags/french_flag.jpg" alt="img"></span>
+                                <div class="d-flex">
+                                    <span class="mt-2">فرانسوی</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex">
+                                    <span class="avatar  ml-3 align-self-center bg-transparent"><img
+                                            src="/img/flags/germany_flag.jpg" alt="img"></span>
+                                <div class="d-flex">
+                                    <span class="mt-2">آلمان</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex">
+                                    <span class="avatar ml-3 align-self-center bg-transparent"><img
+                                            src="/img/flags/italy_flag.jpg" alt="img"></span>
+                                <div class="d-flex">
+                                    <span class="mt-2">ایتالیا</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex">
+                                    <span class="avatar ml-3 align-self-center bg-transparent"><img
+                                            src="/img/flags/russia_flag.jpg" alt="img"></span>
+                                <div class="d-flex">
+                                    <span class="mt-2">روسیه</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item d-flex">
+                                    <span class="avatar  ml-3 align-self-center bg-transparent"><img
+                                            src="/img/flags/spain_flag.jpg" alt="img"></span>
+                                <div class="d-flex">
+                                    <span class="mt-2">اسپانیا</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown ">
+                        <a class="nav-link icon full-screen-link">
+                            <i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
+                            <i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
+                        </a>
+                    </div>
+                    <div class="dropdown main-header-notification">
+                        <a class="nav-link icon" href="#">
+                            <i class="fe fe-bell header-icons"></i>
+                            <span class="badge badge-danger nav-link-badge">4</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="header-navheading">
+                                <p class="main-notification-text">شما 1 اعلان خوانده نشده <span
+                                        class="badge badge-pill badge-primary mr-3">مشاهده همه</span></p>
+                            </div>
+                            <div class="main-notification-list">
+                                <div class="media new">
+                                    <div class="main-img-user online"><img alt="آواتار" src="/img/users/5.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        <p>به <strong>اولیویا جیمز</strong> برای شروع الگوی جدید تبریک می گوییم</p>
+                                        <span>15 بهمن 12:32 بعد از ظهر</span>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="main-img-user"><img alt="آواتار" src="/img/users/2.jpg"></div>
+                                    <div class="media-body">
+                                        <p><strong></strong>پیام جدید <strong>جوشوا گری</strong> دریافت شد</p>
+                                        <span>13 بهمن 02:56 صبح</span>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="main-img-user online"><img alt="آواتار" src="/img/users/3.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        <p><strong>الیزابت لوئیس</strong> برنامه جدیدی را به فروش مجدد اضافه کرد</p>
+                                        <span>12 بهمن 10:40 بعد از ظهر</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#">مشاهده همه اعلان ها</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header-notification mt-2">
+                        <a class="nav-link icon" href="chat.html">
+                            <i class="fe fe-message-square header-icons"></i>
+                            <span class="badge badge-success nav-link-badge">6</span>
+                        </a>
+                    </div>
+                    <div class="dropdown main-profile-menu">
+                        <a class="d-flex" href="#">
+                            <span class="main-img-user"><img alt="آواتار" src="/img/users/1.jpg"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="header-navheading">
+                                <h6 class="main-notification-title">{{ Auth::user()->name }}</h6>
+                                <p class="main-notification-text">طراح وب</p>
+                            </div>
+                            <a class="dropdown-item border-top" href="profile.html">
+                                <i class="fe fe-user"></i> پروفایل من
+                            </a>
+                            <a class="dropdown-item" href="profile.html">
+                                <i class="fe fe-edit"></i> ویرایش نمایه
+                            </a>
+                            <a class="dropdown-item" href="profile.html">
+                                <i class="fe fe-settings"></i> تنظیمات حساب
+                            </a>
+                            <a class="dropdown-item" href="profile.html">
+                                <i class="fe fe-settings"></i> پشتیبانی
+                            </a>
+                            <a class="dropdown-item" href="profile.html">
+                                <i class="fe fe-compass"></i> فعالیت
+                            </a>
+                            <a class="dropdown-item" href="signin.html">
+                                <i class="fe fe-power"></i> خروج از سیستم
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown  header-settings">
+                        <a href="#" class="nav-link icon" id="sidebar-icon" data-bs-toggle="sidebar-left"
+                           data-bs-target=".sidebar-left">
+                            <i class="fe fe-align-left header-icons"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile-header closed -->
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
     <!-- Main Content-->
     <div class="main-content side-content pt-0">
         <div class="container-fluid">
@@ -256,7 +530,10 @@
                                             <label for="profile_image">تصویر پروفایل:</label>
                                             <input type="file" class="form-control" name="profile_image" accept="image/*">
                                         </div>
+<<<<<<< HEAD
                                         <div class="name-family-wrapper">
+=======
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                                         <div class="form-group">
                                             <label for="name">نام:</label>
                                             <input class="form-control" type="text" name="name" id="name"
@@ -277,6 +554,7 @@
                                             <input class="form-control" type="text" name="nat_id" id="nat_id"
                                                 value="{{ $user->nat_id }}" required>
                                         </div>
+<<<<<<< HEAD
                                         </div>
 
 
@@ -469,6 +747,105 @@
                                     </form>
 
                                 </div>
+=======
+                                        <div class="form-group">
+                                            <label for="birth_place">محل تولد:</label>
+                                            <input class="form-control" type="text" name="birth_place"
+                                                id="birth_place" value="{{ $user->birth_place }}" required>
+                                        </div>
+                                        <div class="col-sm-4 mg-t-20 mg-sm-t-0">
+                                            <label class="" for="province">استان:</label>
+                                            <select class="form-control select select2" name="province"
+                                                onChange="updateCityOptions(this.value);">
+                                                <option value="{{ $user->province }}">{{ $userProvince }}</option>
+                                                @foreach ($provinces as $province)
+                                                    <option value="{{ $province->id }}">{{ $province->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <br />
+                                        <div class="item">
+                                            <label class="col-sm-4 mg-t-20 mg-sm-t-0" for="city">شهر:</label>
+                                            <select class="form-control select select2" name="city"
+                                                id="city">
+                                                <option value="{{ $user->city }}">{{ $userCity }}</option>
+                                            </select>
+                                        </div>
+                                        <br />
+                                        <div class="item">
+                                            <label class="item-label">آدرس:</label>
+                                            <input class="form-control" type="text" name="address"
+                                                value="{{ $user->address }}" required />
+                                            <br/>
+                                            @if ($user->Addresses->count() > 0)
+                                                @foreach ($user->Addresses as $index => $address)
+                                                    <div class="form-group address-field">
+                                                        <label for="addresses[{{ $index }}]">آدرس
+                                                            {{ $index + 1 }}:</label>
+                                                        <input class="form-control" type="text"
+                                                               name="addresses[{{ $index }}]"
+                                                               value="{{ old('addresses.' . $index, $address->address) }}" />
+                                                    </div>
+                                                @endforeach
+                                            @endif
+                                            <button type="button" class="btn btn-success add-address-field">+</button>
+                                        </div>
+                                        <br />
+                                        <div class="item">
+                                            <label class="item-label">وضعیت تاهل:</label>
+                                            <label class="rdiobox"><input type="radio" name="marriage"
+                                                    value="single" {{ $user->marriage == 'single' ? 'checked' : '' }}
+                                                    required> <span>مجرد</span></label>
+                                            <label class="rdiobox"><input type="radio" name="marriage"
+                                                    value="married"
+                                                    {{ $user->marriage == 'married' ? 'checked' : '' }} required>
+                                                <span>متاهل</span></label>
+                                        </div>
+                                        <br />
+                                        <div class="form-group">
+                                            <label for="birth_date">تاریخ تولد:</label>
+                                            <input class="form-control" type="text" name="birth_date"
+                                                id="pcal1" class="pdate" value="{{ $user->birth_date }}"
+                                                required>
+                                        </div>
+                                        <br />
+                                        <div class="form-group phone_num-field">
+                                            <label for="phone_num">شماره همراه:</label>
+                                            <input class="form-control" type="text" name="phone_num"
+                                                id="pcal1" class="pdate" value="{{ $user->phone_num }}"
+                                                required>
+
+                                            <br />
+                                            @if ($user->phoneNumbers->count() > 0)
+                                                @foreach ($user->phoneNumbers as $index => $phoneNumber)
+                                                    <div class="form-group phone_num-field">
+                                                        <label for="phone_numbers[{{ $index }}]">شماره همراه
+                                                            {{ $index + 1 }}:</label>
+                                                        <input class="form-control" type="text"
+                                                            name="phone_numbers[{{ $index }}]"
+                                                            value="{{ old('phone_numbers.' . $index, $phoneNumber->phone_number) }}" />
+                                                    </div>
+                                                @endforeach
+                                            @endif
+                                            <button type="button"
+                                                class="btn btn-success add-phone_num-field">+</button>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="telephone">تلفن:</label>
+                                            <input class="form-control" type="text" name="telephone"
+                                                id="pcal1" class="pdate" value="{{ $user->telephone }}"
+                                                required>
+                                        </div>
+
+                                        <button type="submit" class="btn ripple btn-main-primary btn-block">ذخیره
+                                            تغییرات</button>
+
+
+                                    </form>
+
+                                </div>
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                             </div>
                         </div>
                     </div>
@@ -487,39 +864,48 @@
 
 
 
+<<<<<<< HEAD
 <script type="text/javascript">
     function addPhoneNumField() {
         var newField = document.createElement('div');
         newField.className = 'phone_num-field';
+=======
+    <script type="text/javascript">
+        function addPhoneNumField() {
+            var newField = document.createElement('div');
+            newField.className = 'phone_num-field';
 
-        var closeButton = document.createElement('button');
-        closeButton.type = 'button';
-        closeButton.className = 'btn btn-close rm-phone-field';
-        closeButton.textContent = '-';
+            var closeButton = document.createElement('button');
+            closeButton.type = 'button';
+            closeButton.className = 'btn btn-close rm-phone-field';
+            closeButton.textContent = '-';
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
 
-        var inputField = document.createElement('input');
-        inputField.type = 'text';
-        inputField.className = 'form-control';
-        inputField.name = 'phone_numbers[]';
-        newField.appendChild(closeButton);
-        newField.appendChild(inputField);
+            var inputField = document.createElement('input');
+            inputField.type = 'text';
+            inputField.className = 'form-control';
+            inputField.name = 'phone_numbers[]';
+            newField.appendChild(closeButton);
+            newField.appendChild(inputField);
 
-        var addButton = document.querySelector('.add-phone_num-field');
-        addButton.parentNode.insertBefore(newField, addButton);
-    }
+            var addButton = document.querySelector('.add-phone_num-field');
+            addButton.parentNode.insertBefore(newField, addButton);
+        }
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var addPhoneButton = document.querySelector('.add-phone_num-field');
+        document.addEventListener('DOMContentLoaded', function() {
+            var addPhoneButton = document.querySelector('.add-phone_num-field');
 
-        addPhoneButton.addEventListener('click', addPhoneNumField);
+            addPhoneButton.addEventListener('click', addPhoneNumField);
 
-        document.addEventListener('click', function(event) {
-            if (event.target.classList.contains('rm-phone-field')) {
-                event.target.closest('.phone_num-field').remove();
-            }
+            document.addEventListener('click', function(event) {
+                if (event.target.classList.contains('rm-phone-field')) {
+                    event.target.closest('.phone_num-field').remove();
+                }
 
+            });
         });
+<<<<<<< HEAD
     });
 
     function addAddressField() {
@@ -549,10 +935,58 @@
         });
     });
 </script>
+=======
+
+        function addAddressField() {
+            var newField = document.createElement('div');
+            newField.className = 'address-field';
+
+            var closeButton = document.createElement('button');
+            closeButton.type = 'button';
+            closeButton.className = 'btn btn-close rm-address-field';
+            closeButton.textContent = '-';
+            var inputField = document.createElement('input');
+            inputField.type = 'text';
+            inputField.className = 'form-control';
+            inputField.name = 'addresses[]';
+            newField.appendChild(closeButton);
+            newField.appendChild(inputField);
+            var addButton = document.querySelector('.add-address-field');
+            addButton.parentNode.insertBefore(newField, addButton);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var addAddressButton = document.querySelector('.add-address-field');
+            addAddressButton.addEventListener('click', addAddressField);
+            document.addEventListener('click', function(event) {
+                if (event.target.classList.contains('rm-address-field')) {
+                    event.target.closest('.address-field').remove();
+                }
+            });
+        });
+    </script>
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
 
 
+    <script src="/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap-rtl.js"></script>
+
+    <!-- Perfect-scrollbar js -->
+    <script src="/plugins/perfect-scrollbar/perfect-scrollbar.min-rtl.js"></script>
+
+    <!-- Sidemenu js -->
+    <script src="/plugins/sidemenu/sidemenu-rtl.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="/plugins/sidebar/sidebar-rtl.js"></script>
+
+    <!-- Select2 js-->
+    <script src="/plugins/select2/js/select2.min.js"></script>
 
 
+<<<<<<< HEAD
     <script src="/plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap js-->
@@ -578,5 +1012,13 @@
     <!-- Custom js -->
     <script src="/js/custom.js"></script>
 
+=======
+    <!-- Sticky js -->
+    <script src="/js/sticky.js"></script>
+
+    <!-- Custom js -->
+    <script src="/js/custom.js"></script>
+
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
 </body>
 </html>

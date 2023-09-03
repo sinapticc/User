@@ -30,7 +30,11 @@ class UserController extends Controller
     {
 
         $validatedData = $request->validate([
+<<<<<<< HEAD
             'profile_image' => 'image|mimes:jpeg,png,jpg,gif|max:50000',
+=======
+            'profile_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:512',
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
             'name' => 'required|string|regex:/[ء-ي‌]+/u',
             'family_name' => 'required|string|regex:/[ء-ي‌]+/u',
             'father_name' => 'required|string|regex:/[ء-ي‌]+/u',
@@ -46,6 +50,7 @@ class UserController extends Controller
             'marriage' => 'required|in:single,married',
             'birth_date' => 'required|string|max:255',
             'telephone' => 'required|string|size:11',
+<<<<<<< HEAD
 
         ], [
             "profile_image.mimes" => "jpeg,png,jpg,gif",
@@ -60,12 +65,33 @@ class UserController extends Controller
             "name.required" => "فیلد اجباری است.",
             "family_name.required" => "فیلد اجباری است.",
             "father_name.required" => "فیلد اجباری است.",
+=======
+            'phone_numbers' => 'array',
+            'phone_numbers.*' => 'size:11',
+        ], [
+            "profile_image.mimes" => "jpeg,png,jpg,gif",
+            "name.regex" => "مقدار فیلد را فارسی وارد نمایید",
+            "family_name.regex" => "مقدار فیلد را فارسی وارد نمایید",
+            "father_name.regex" => "مقدار فیلد را فارسی وارد نمایید",
+            "birth_place.regex" => "مقدار فیلد را فارسی وارد نمایید",
+            "nat_id.size" => "مقدار کد ملی 10 کاراکتر است",
+            "phone_num.size" => "مقدار شماره همراه 11 کاراکتر است",
+            "telephone.size" => "مقدار شماره تلفن 11 کاراکتر است",
+            "address.regex" => "مقدار فیلد را فارسی وارد نمایید",
+
+            "profile_image.required" => "فیلد اجباری است.",
+            "name.required" => "فیلد اجباری است.",
+            "family_name.required" => "فیلد اجباری است.",
+            "father_name.required" => "فیلد اجباری است.",
+            "birth_place.required" => "فیلد اجباری است.",
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
             "nat_id.required" => "فیلد اجباری است.",
             "address.required" => "فیلد اجباری است.",
             "birth_date.required" => "فیلد اجباری است.",
             "phone_num.required" => "فیلد اجباری است.",
             "telephone.required" => "فیلد اجباری است.",
 
+<<<<<<< HEAD
             "profile_image.max" => "حجم عکس نباید بیشتر از 50 مگابایت باشد.",
 
             "city1.not_in" => "لطفا یک شهر را انتخاب کنید.",
@@ -73,10 +99,22 @@ class UserController extends Controller
 
         ]);
 //        dd($request->all());
+=======
+            "profile_image.max" => "حجم عکس نباید بیشتر از 512 کیلوبایت باشد.",
 
+        ]);
+        //dd($request->all());
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
+
+        $imagePath = $request->file('profile_image')->store('public/user_images');
 
         $user = new User();
+<<<<<<< HEAD
         $user->image_path = $request->hasFile('profile_image') ? $request->file('profile_image')->store('public/user_images') : 'default-image.png';
+=======
+
+        $user->image_path = $imagePath;
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
         $user->name = $validatedData['name'];
         $user->family_name = $validatedData['family_name'];
         $user->father_name = $validatedData['father_name'];
@@ -120,6 +158,7 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
+<<<<<<< HEAD
         $searchTerm = $request->input('search');
         $usersQuery = User::query();
 
@@ -134,6 +173,11 @@ class UserController extends Controller
         $users = $usersQuery->get();
 
         return view('users_list', compact('users'));
+=======
+
+        $users = User::all();
+        return view('users_list', ['users' => $users]);
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
     }
 
 
@@ -159,10 +203,17 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $validatedData = $request->validate([
+<<<<<<< HEAD
             'profile_image' => 'image|mimes:jpeg,png,jpg,gif|max:50000',
             'name' => 'required|string|regex:/[ء-ي‌]+/u',
             'family_name' => 'required|string|regex:/[ء-ي‌]+/u',
             'father_name' => 'required|string|regex:/[ء-ي‌]+/u',
+=======
+            'profile_image' => 'image|mimes:jpeg,png,jpg,gif|max:512',
+            'name' => 'required|string|max:255',
+            'family_name' => 'required|string|max:255',
+            'father_name' => 'required|string|max:255',
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
             'nat_id' => 'required|string|size:10',
             'province1' => 'required|int',
             'city1' => 'required|int|not_in:0',
@@ -177,6 +228,10 @@ class UserController extends Controller
             'telephone' => 'required|string|size:11',
         ]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
         $previousImagePath = $user->image_path;
 
         if ($request->hasFile('profile_image')) {
@@ -186,7 +241,11 @@ class UserController extends Controller
             $user->save();
 
         } else {
+<<<<<<< HEAD
 
+=======
+            // استفاده از تصویر قبلی
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
             $user->image_path = $previousImagePath;
             $user->save();
         }
@@ -206,6 +265,11 @@ class UserController extends Controller
         $user->telephone = $validatedData['telephone'];
         $user->save();
 
+<<<<<<< HEAD
+=======
+        $user->phoneNumbers()->delete();
+        $user->Addresses()->delete();
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
 
         if ($request->has('delete_address')) {
             $addressToDelete = $request->input('delete_address');
@@ -217,6 +281,10 @@ class UserController extends Controller
 
         $addresses = $request->input('addresses');
         $phoneNumbers = $request->input('phone_numbers');
+<<<<<<< HEAD
+=======
+        $addresses = $request->input('addresses');
+>>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
 
         if ($phoneNumbers) {
             foreach ($phoneNumbers as $phoneNumber) {
