@@ -1,10 +1,15 @@
 var getCitiesRoute = '/get-cities';
-function updateCityOptions(provinceId) {
-    var citySelect = document.getElementById('city');
-    citySelect.innerHTML = ''; // خالی کردن لیست شهرها
+
+function updateCityOptions(citySelectId, provinceId) {
+    var citySelect = document.getElementById(citySelectId);
+    citySelect.innerHTML = '';
+
+    var defaultOption = document.createElement('option');
+    defaultOption.value = '0';
+    defaultOption.textContent = 'شهر را انتخاب کنید';
+    citySelect.appendChild(defaultOption);
 
     if (provinceId !== '0') {
-        // ارسال درخواست به سرور
         var xhr = new XMLHttpRequest();
         xhr.open('GET', getCitiesRoute + '/' + provinceId, true);
         xhr.onreadystatechange = function() {

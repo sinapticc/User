@@ -73,6 +73,81 @@ body {
     background-color: #fff
 }
 
+
+[type^="text"]{
+    color: black !important;
+}
+
+[type^="number"]{
+    color: black !important;
+}
+
+select {
+    color: black;
+}
+
+
+.multi-box{
+    border: 1px solid #e6e2e2;
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #f6f2f2;
+    flex-grow: 1;
+}
+.name-family-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-grow: 1;
+
+}
+label{
+    white-space: nowrap;
+}
+.name-family-wrapper div{
+    flex-grow: 1;
+    max-width: 350px;
+
+}
+
+.radio-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+
+.group2{
+    display: flex;
+}
+
+.date-num-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-grow: 1;
+    margin: 1rem 0;
+
+}
+
+
+
+.form-group-2{
+    
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+
+}
+
+.location-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-grow: 1;
+    margin: 1rem 0;
+}
+
+
 [tabindex="-1"]:focus {
     outline: 0 !important
 }
@@ -81,6 +156,12 @@ body {
     color: red;
     font-size: 14px;
     margin-top: 5px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+
 }
 
 hr {
@@ -3627,7 +3708,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .card-body {
     flex: 1 1 auto;
-    padding: 25px
+    padding: 25px;
+    padding-bottom: 0;
 }
 
 .main-content-label {
@@ -4771,7 +4853,7 @@ select.form-control[multiple], select.form-control[size], textarea.form-control 
 }
 
 .form-group {
-    margin-bottom: 1rem
+    position: relative;
 }
 
 .form-text {

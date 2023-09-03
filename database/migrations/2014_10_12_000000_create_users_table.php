@@ -13,19 +13,20 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('image_path')->default('public/storage/user_images/default-image.png');
             $table->string('name');
             $table->string('family_name');
             $table->string('father_name');
             $table->string('nat_id');
-            $table->string('birth_place');
-            $table->integer('province');
-            $table->integer('city');
+            $table->integer('province1');
+            $table->integer('city1');
+            $table->integer('province2');
+            $table->integer('city2');
             $table->string('address');
             $table->string('marriage');
             $table->string('birth_date');
             $table->string('phone_num');
             $table->string('telephone');
-
 
 
         });
