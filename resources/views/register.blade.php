@@ -63,11 +63,7 @@
                             <div class="clearfix"></div>
                             <img src="/img/svgs/user.svg" class="ht-100 mb-0" alt="user">
                             <h5 class="mt-4 text-white">حساب کاربری برای خود بسازید</h5>
-<<<<<<< HEAD
                             <span class="tx-white-6 tx-13 mb-5 mt-xl-0">برای دسترسی به کاربران، باید حساب کاربری بسازید</span>
-=======
-                            <span class="tx-white-6 tx-13 mb-5 mt-xl-0">برای ایجاد ، کشف و ارتباط با جامعه جهانی ثبت نام کنید</span>
->>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-7 col-xs-12 col-sm-12 login_form ">
@@ -76,21 +72,14 @@
                                 <div class="card-body mt-2 mb-2">
                                     <img src="/img/brand/logo.png" class=" d-lg-none header-brand-img text-left float-left mb-4" alt="logo">
                                     <div class="clearfix"></div>
-<<<<<<< HEAD
                                     <h5 class="text-right mb-2">ثبت نام</h5>
-=======
-                                    <h5 class="text-right mb-2">ثبت نام رایگان</h5>
-                                    <p class="mb-4 text-muted tx-13 ml-0 text-right">ثبت نام رایگان است و فقط یک دقیقه طول می کشد.</p>
->>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
+                                    <br/>
+
                                     <form class="base-form" action="{{ route('register') }}" method="POST">
                                         @csrf
                                         <div class="form-group text-right">
                                             <label>نام</label>
-<<<<<<< HEAD
                                             <input class="form-control" placeholder="نام خود را وارد کنید" type="text" name="name">
-=======
-                                            <input class="form-control" placeholder="اسمت را وارد کن" type="text" name="name">
->>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
                                         </div>
                                         <div class="form-group text-right">
                                             <label>پست الکترونیک</label>
@@ -109,7 +98,7 @@
                                         @endif
                                     </form>
                                     <div class="text-right mt-5 ml-0">
-                                        <p class="mb-0">در حال حاضر یک حساب کاربری دارید <a href="/login">ورود</a></p>
+                                        <p class="mb-0">حساب کاربری دارید؟ <a href="/login">ورود</a></p>
                                     </div>
                                 </div>
                             </div>

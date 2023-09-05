@@ -16,11 +16,7 @@ class User extends Authenticatable
     protected $table = 'users';
 
 
-<<<<<<< HEAD
     public function bProvince()
-=======
-    public function userProvince()
->>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
     {
         return $this->belongsTo(Province::class, 'province1');
     }

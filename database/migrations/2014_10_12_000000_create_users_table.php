@@ -13,11 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-<<<<<<< HEAD
             $table->string('image_path')->default('public/storage/user_images/default-image.png');
-=======
-            $table->string('image_path')->default('/img/default-image.png');
->>>>>>> 565adabba8cb7b70602df239b271647cd6000fa8
             $table->string('name');
             $table->string('family_name');
             $table->string('father_name');
